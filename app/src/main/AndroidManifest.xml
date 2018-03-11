@@ -26,15 +26,16 @@
     android:versionCode="43"
     android:versionName="2.0" >
 
-    <uses-sdk
-        android:minSdkVersion="18"
-        android:targetSdkVersion="18" />
+    <uses-sdk />
     <uses-permission android:name="android.permission.BLUETOOTH" />
     <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+
 
     <application 
         android:label="@string/app_name"
-        android:theme="@android:style/Theme.Holo.Light"
+        android:theme="@android:style/Theme.Material.NoActionBar"
         android:icon="@drawable/nrfuart_hdpi_icon">
         <activity
             android:name=".MainActivity"
@@ -47,7 +48,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".DeviceListActivity" android:label="@string/app_name" android:theme="@android:style/Theme.Dialog"/>
+        <activity android:name=".DeviceListActivity" android:label="@string/app_name" android:theme="@android:style/Theme.Material.Dialog"/>
         <service android:enabled="true" android:name=".UartService" />
     </application>
 

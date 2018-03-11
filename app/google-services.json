@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "88972107728",
+    "firebase_url": "https://bike-smart-assistant.firebaseio.com",
+    "project_id": "bike-smart-assistant",
+    "storage_bucket": "bike-smart-assistant.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:88972107728:android:ef3a30f413163312",
+        "android_client_info": {
+          "package_name": "com.nordicsemi.nrfUARTv2"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "88972107728-eklei65u91um5g3a2hc99k78lqtkbj3b.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.nordicsemi.nrfUARTv2",
+            "certificate_hash": "e4ede63a094269240d40f202f9a614e7f9cb89d6"
+          }
+        },
+        {
+          "client_id": "88972107728-fia2eev7veedsn9kbib8f34esu1lcid8.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBuVEKwk4gDWe-IkOFd0mCY2ha_MsoGiDo"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "88972107728-fia2eev7veedsn9kbib8f34esu1lcid8.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
