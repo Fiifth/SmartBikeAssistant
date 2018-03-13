@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
     android:orientation="vertical" >
@@ -28,96 +29,94 @@
                 android:id="@+id/linearLayout8"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="State" />
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="Green" />
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="Red" />
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="Elapsed" />
+
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:src="@drawable/greenlight" />
+
+
+
+                <ImageView
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_weight="1"
+                    android:src="@drawable/redlight" />
+                <ImageView
+                    android:id="@+id/elapsedImage"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:src="@drawable/elapsedgreen" />
         </LinearLayout>
         <LinearLayout
             android:id="@+id/linearLayout9"
             android:layout_width="match_parent"
             android:layout_height="30dp">
-            <TextView
-                android:id="@+id/stateText"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="State" />
+
             <TextView
                 android:id="@+id/greenTime"
-                android:layout_width="wrap_content"
+                android:layout_width="40dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
+                android:gravity="center"
                 android:text="Green" />
             <TextView
                 android:id="@+id/redTime"
-                android:layout_width="wrap_content"
+                android:layout_width="40dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
+                android:gravity="center"
                 android:text="Red" />
             <TextView
                 android:id="@+id/elapsedTime"
-                android:layout_width="wrap_content"
+                android:layout_width="40dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
+                android:gravity="center"
                 android:text="Elapsed" />
         </LinearLayout>
+
         <RelativeLayout
             android:id="@+id/RelativeLayout1"
             android:layout_width="match_parent"
             android:layout_height="292dp"
             android:layout_weight="4.11"
-            android:orientation="vertical" >
+            android:orientation="vertical">
 
-            <EditText
-                android:id="@+id/sendText"
-                android:layout_width="102dp"
-                android:layout_height="wrap_content"
-                android:layout_alignParentBottom="true"
-                android:layout_alignParentLeft="true"
-                android:layout_toLeftOf="@+id/sendButton"
-                android:ems="10"
-                android:enabled="false"
-                android:fontFamily="1"
-                android:lines="1"
-                android:maxLength="20"
-                android:maxLines="1"
-                android:shadowRadius="1" />
-
-            <ListView
-                android:id="@+id/listMessage"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_above="@+id/sendButton"
-                android:layout_alignParentLeft="true"
-                android:layout_alignParentTop="true" >
-            </ListView>
-
-            <Button
-                android:id="@+id/sendButton"
+            <TextView
+                android:id="@+id/speedView"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_alignParentBottom="true"
-                android:layout_alignParentRight="true"
-                android:enabled="false"
-                android:text="Send" />
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="85dp"
+                android:text="23.55"
+                android:textSize="60sp" />
 
+            <TextView
+                android:id="@+id/slowerSpeed"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/speedView"
+                android:layout_alignParentStart="true"
+                android:layout_marginBottom="25dp"
+                android:layout_marginStart="20dp"
+                android:text="11.11"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/fasterSpeed"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBaseline="@+id/slowerSpeed"
+                android:layout_alignBottom="@+id/slowerSpeed"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="20dp"
+                android:text="30.10"
+                android:textSize="20sp" />
         </RelativeLayout>
     </LinearLayout>
 

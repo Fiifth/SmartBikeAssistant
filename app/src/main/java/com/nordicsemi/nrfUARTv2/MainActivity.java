@@ -54,6 +54,7 @@ import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.RadioGroup;
 import android.widget.TextView;
@@ -72,7 +73,10 @@ import com.google.firebase.database.ValueEventListener;
 
 import java.io.UnsupportedEncodingException;
 import java.text.DateFormat;
+import java.text.DecimalFormat;
+import java.text.DecimalFormatSymbols;
 import java.util.Date;
+import java.util.Locale;
 import java.util.Timer;
 import java.util.TimerTask;
 
@@ -102,9 +106,14 @@ public class MainActivity extends Activity implements RadioGroup.OnCheckedChange
     private Button btnConnectDisconnect,btnSend,btn1,btn2,btn3;
     private EditText edtMessage;
     private TextView stateText;
+    private TextView speedView;
+    private TextView slowerSpeed;
+    private TextView fasterSpeed;
+
     private TextView redText;
     private TextView greenText;
     private TextView elapsedText;
+    private ImageView elapsedImage;
     private FusedLocationProviderClient mFusedLocationClient;
     private LocationRequest mLocationRequest;
     private LocationCallback mLocationCallback;
@@ -114,18 +123,21 @@ public class MainActivity extends Activity implements RadioGroup.OnCheckedChange
     private float  timeRed=0.0f;
     private float timeGreen=0.0f;
     private float elapsedTime=0.0f;
-    private int state=0;
-    private int ledControl=0;
-    private int locationUpdates=0;
+    private int state=1;
+    private boolean ledControl=false;
+    private boolean locationUpdates=false;
     private Date timeOfmeasurement;
+    private boolean locationWasOn=false;
+    private boolean destinationRequest=false;
     FirebaseDatabase database;
     DatabaseReference myRef;
+    DecimalFormat df;
 
 
     protected void createLocationRequest() {
         mLocationRequest = new LocationRequest();
         mLocationRequest.setInterval(1000);
-        mLocationRequest.setFastestInterval(1000);
+        mLocationRequest.setFastestInterval(500);
         mLocationRequest.setPriority(LocationRequest.PRIORITY_HIGH_ACCURACY);
     }
 
@@ -142,6 +154,8 @@ public class MainActivity extends Activity implements RadioGroup.OnCheckedChange
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
+        df = new DecimalFormat("0", DecimalFormatSymbols.getInstance(Locale.ENGLISH));
+        df.setMaximumFractionDigits(2); //340 = DecimalFormat.DOUBLE_FRACTION_DIGITS
         super.onCreate(savedInstanceState);
         setContentView(R.layout.main);
         mBtAdapter = BluetoothAdapter.getDefaultAdapter();
@@ -163,28 +177,33 @@ public class MainActivity extends Activity implements RadioGroup.OnCheckedChange
             createLocationRequest();
         }
         timeOfmeasurement=new Date();
-        messageListView = (ListView) findViewById(R.id.listMessage);
-        listAdapter = new ArrayAdapter<String>(this, R.layout.message_detail);
-        messageListView.setAdapter(listAdapter);
-        messageListView.setDivider(null);
+        //messageListView = (ListView) findViewById(R.id.listMessage);
+       // listAdapter = new ArrayAdapter<String>(this, R.layout.message_detail);
+       // messageListView.setAdapter(listAdapter);
+       // messageListView.setDivider(null);
         btnConnectDisconnect=(Button) findViewById(R.id.btn_select);
-        btnSend=(Button) findViewById(R.id.sendButton);
+        //btnSend=(Button) findViewById(R.id.sendButton);
         btn1 =(Button) findViewById(R.id.button2);
         btn2=(Button) findViewById(R.id.button3);
         btn3=(Button) findViewById(R.id.button4);
 
-        edtMessage = (EditText) findViewById(R.id.sendText);
-        stateText = (TextView) findViewById(R.id.stateText);
+        //edtMessage = (EditText) findViewById(R.id.sendText);
         redText = (TextView) findViewById(R.id.redTime);
         greenText = (TextView) findViewById(R.id.greenTime);
         elapsedText = (TextView) findViewById(R.id.elapsedTime);
+        elapsedImage = (ImageView)  findViewById(R.id.elapsedImage);
+        speedView=(TextView)  findViewById(R.id.speedView);
+        slowerSpeed=(TextView)  findViewById(R.id.slowerSpeed);
+        fasterSpeed=(TextView)  findViewById(R.id.fasterSpeed);
+
+
         if(state==0)
-            stateText.setText("Red");
+            elapsedImage.setImageResource(R.drawable.elapsedred);
         else
-            stateText.setText("Green");
-        redText.setText(Float.toString(timeRed));
-        greenText.setText(Float.toString(timeGreen));
-        elapsedText.setText(Float.toString(elapsedTime));
+            elapsedImage.setImageResource(R.drawable.elapsedgreen);
+        redText.setText(df.format(timeRed));
+        greenText.setText(df.format(timeGreen));
+        elapsedText.setText(df.format(elapsedTime));
 
 
         service_init();
@@ -195,9 +214,22 @@ public class MainActivity extends Activity implements RadioGroup.OnCheckedChange
                 for (Location location : locationResult.getLocations()) {
                     currentLocation = location;
                 }
-                if(ledControl==1&&timeRed!=0&&timeGreen!=0) {
+
+                speedView.setText(df.format((currentLocation.getSpeed()*3.6f)));
+               // speedView.setText(String.format("%f",(currentLocation.getSpeed()*3.6f)));
+                if(ledControl&&timeRed!=0&&timeGreen!=0) {
                     calculateLed();
                 }
+                if(!locationWasOn&& destinationRequest&&!ledControl)
+                {
+                    destination.setLatitude(currentLocation.getLatitude());
+                    destination.setLongitude(currentLocation.getLongitude());
+                    myRef.setValue(String.valueOf(String.valueOf(destination.getLatitude()) + "-" + destination.getLongitude()));
+                    destinationRequest=false;
+                    stopLocationUpdates();
+                    btn3.setEnabled(true);
+                }
+
             }
         };
 
@@ -223,7 +255,7 @@ public class MainActivity extends Activity implements RadioGroup.OnCheckedChange
         				if (mDevice!=null)
         				{
         					mService.disconnect();
-                            ledControl=0;
+                            ledControl=false;
         					
         				}
         			}
@@ -231,6 +263,7 @@ public class MainActivity extends Activity implements RadioGroup.OnCheckedChange
             }
         });
         // Handle Send button
+        /*
         btnSend.setOnClickListener(new View.OnClickListener()
         {
             @Override
@@ -254,18 +287,19 @@ public class MainActivity extends Activity implements RadioGroup.OnCheckedChange
                 }
             }
         });
+        */
 
         btn1.setOnClickListener(new View.OnClickListener()
         {
             @Override
             public void onClick(View v) {
-                if(locationUpdates==0) {
+                if(locationUpdates==false) {
                     startLocationUpdates();
-                    locationUpdates = 1;
+                    locationUpdates = true;
                 }
-                else if(locationUpdates==1) {
+                else if(locationUpdates==true) {
                     stopLocationUpdates();
-                    locationUpdates=0;
+                    locationUpdates=false;
                 }
             }
         });
@@ -274,10 +308,18 @@ public class MainActivity extends Activity implements RadioGroup.OnCheckedChange
         {
             @Override
             public void onClick(View v) {
-                if(ledControl==0)
-                    ledControl=1;
-                else if (ledControl==1)
-                    ledControl=0;
+                if(ledControl==false) {
+                    startLocationUpdates();
+                    ledControl = true;
+                    locationUpdates=true;
+                }
+                else if (ledControl==true) {
+                    ledControl = false;
+                    if (destinationRequest == false) {
+                        locationUpdates = false;
+                        stopLocationUpdates();
+                    }
+                }
                 }
         });
 
@@ -285,9 +327,19 @@ public class MainActivity extends Activity implements RadioGroup.OnCheckedChange
         {
             @Override
             public void onClick(View v) {
-                destination.setLatitude(currentLocation.getLatitude());
-                destination.setLongitude(currentLocation.getLongitude());
-                myRef.setValue(String.valueOf(String.valueOf(destination.getLatitude())+"-"+destination.getLongitude()));
+                if(locationUpdates==true) {
+                    destination.setLatitude(currentLocation.getLatitude());
+                    destination.setLongitude(currentLocation.getLongitude());
+                    myRef.setValue(String.valueOf(String.valueOf(destination.getLatitude()) + "-" + destination.getLongitude()));
+                }
+                else
+                {
+                    startLocationUpdates();
+                    locationUpdates=true;
+                    locationWasOn=false;
+                    destinationRequest=true;
+                    btn3.setEnabled(false);
+                }
             }
         });
 
@@ -346,9 +398,11 @@ public class MainActivity extends Activity implements RadioGroup.OnCheckedChange
                         String spdString=String.valueOf(spd);
                         String message=latString+"-"+lngString+"-"+spdString;
                         //String message = currentLocation.toString();
+                        /*
                         byte[] value;
                         try {
                             //send data to service
+
                             value = message.getBytes("UTF-8");
                             mService.writeRXCharacteristic(value);
                             //Update the log with time stamp
@@ -360,6 +414,7 @@ public class MainActivity extends Activity implements RadioGroup.OnCheckedChange
                             // TODO Auto-generated catch block
                             e.printStackTrace();
                         }
+                        */
 
                     }
                 });
@@ -409,11 +464,12 @@ public class MainActivity extends Activity implements RadioGroup.OnCheckedChange
                          	String currentDateTimeString = DateFormat.getTimeInstance().format(new Date());
                              Log.d(TAG, "UART_CONNECT_MSG");
                              btnConnectDisconnect.setText("Disconnect");
-                             edtMessage.setEnabled(true);
-                             btnSend.setEnabled(true);
+                            /* edtMessage.setEnabled(true);
+                             //btnSend.setEnabled(true);
                              ((TextView) findViewById(R.id.deviceName)).setText(mDevice.getName()+ " - ready");
                              listAdapter.add("["+currentDateTimeString+"] Connected to: "+ mDevice.getName());
                         	 	messageListView.smoothScrollToPosition(listAdapter.getCount() - 1);
+                        	 	*/
                              mState = UART_PROFILE_CONNECTED;
                      }
             	 });
@@ -426,8 +482,8 @@ public class MainActivity extends Activity implements RadioGroup.OnCheckedChange
                     	 	 String currentDateTimeString = DateFormat.getTimeInstance().format(new Date());
                              Log.d(TAG, "UART_DISCONNECT_MSG");
                              btnConnectDisconnect.setText("Connect");
-                             edtMessage.setEnabled(false);
-                             btnSend.setEnabled(false);
+                             //edtMessage.setEnabled(false);
+                             //btnSend.setEnabled(false);
                              ((TextView) findViewById(R.id.deviceName)).setText("Not Connected");
                              listAdapter.add("["+currentDateTimeString+"] Disconnected to: "+ mDevice.getName());
                              mState = UART_PROFILE_DISCONNECTED;
@@ -454,8 +510,8 @@ public class MainActivity extends Activity implements RadioGroup.OnCheckedChange
                          	String currentDateTimeString = DateFormat.getTimeInstance().format(new Date());
                              setTimingvalues(text,new Date());
                              if(text.length()!=20) {
-                                 listAdapter.add("["+currentDateTimeString+"] RX: "+text);
-                                 messageListView.smoothScrollToPosition(listAdapter.getCount() - 1);
+                                // listAdapter.add("["+currentDateTimeString+"] RX: "+text);
+                                // messageListView.smoothScrollToPosition(listAdapter.getCount() - 1);
                              }
 
                          } catch (Exception e) {
@@ -636,8 +692,8 @@ public class MainActivity extends Activity implements RadioGroup.OnCheckedChange
         //float distance=currentLocation.distanceTo(destination); // in meters
         float[] distance={0.0f};
         Location.distanceBetween(currentLocation.getLatitude(),currentLocation.getLongitude(),destination.getLatitude(),destination.getLongitude(),distance);
-        listAdapter.add("lat: "+ String.valueOf(destination.getLatitude())+"lon:"+String.valueOf(destination.getLongitude())+"distance:"+String.valueOf(distance[0]));
-        messageListView.smoothScrollToPosition(listAdapter.getCount() - 1);
+        //listAdapter.add("lat: "+ String.valueOf(destination.getLatitude())+"lon:"+String.valueOf(destination.getLongitude())+"distance:"+String.valueOf(distance[0]));
+        //messageListView.smoothScrollToPosition(listAdapter.getCount() - 1);
         int numberOfGreenTimes=10;
         int index;
 
@@ -662,7 +718,11 @@ public class MainActivity extends Activity implements RadioGroup.OnCheckedChange
                 //Log.w(TAG, "State was 0 but 10 seconds have elapsed"+Float.toString(realTimeElapsed));
             }
         }
-        elapsedText.setText(Float.toString(realTimeElapsed));
+
+
+        elapsedText.setText(df.format(realTimeElapsed));
+
+       // elapsedText.setText(Float.toString(realTimeElapsed));
         /*
         listAdapter.add("realTimeElapsed: "+ String.valueOf(realTimeElapsed));
         messageListView.smoothScrollToPosition(listAdapter.getCount() - 1);
@@ -674,9 +734,9 @@ public class MainActivity extends Activity implements RadioGroup.OnCheckedChange
         messageListView.smoothScrollToPosition(listAdapter.getCount() - 1);
         */
         if(realState==0)
-            stateText.setText("Red");
+            elapsedImage.setImageResource(R.drawable.elapsedred);
         else
-            stateText.setText("Green");
+            elapsedImage.setImageResource(R.drawable.elapsedgreen);
 
 
         if(distance[0]!=0) {
@@ -697,10 +757,10 @@ public class MainActivity extends Activity implements RadioGroup.OnCheckedChange
             {
                 times[index] = times[index - 1] + timeRed;
                 speedIntervals[index] = (distance[0] / times[index])*3.6f;
-                listAdapter.add("Time-"+index+": "+ String.valueOf(times[index]));
-                messageListView.smoothScrollToPosition(listAdapter.getCount() - 1);
-                listAdapter.add("Speeds-"+index+": "+ String.valueOf(speedIntervals[index]));
-                messageListView.smoothScrollToPosition(listAdapter.getCount() - 1);
+                //listAdapter.add("Time-"+index+": "+ String.valueOf(times[index]));
+                //messageListView.smoothScrollToPosition(listAdapter.getCount() - 1);
+                //listAdapter.add("Speeds-"+index+": "+ String.valueOf(speedIntervals[index]));
+                //messageListView.smoothScrollToPosition(listAdapter.getCount() - 1);
                 index++;
                 times[index] = times[index - 1] + timeGreen;
                 speedIntervals[index] = (distance[0] / times[index])*3.6f;
@@ -717,16 +777,18 @@ public class MainActivity extends Activity implements RadioGroup.OnCheckedChange
                         lowerSpeed1 = speedIntervals[index];
                         lowerSpeed2 = speedIntervals[index++];
                         lowerSpeedAvg = (lowerSpeed2 + lowerSpeed1) / 2;
-                        listAdapter.add("Recommended lowerSpeed: "+ String.valueOf(lowerSpeedAvg));
-                        messageListView.smoothScrollToPosition(listAdapter.getCount() - 1);
+                        slowerSpeed.setText(df.format(lowerSpeedAvg));
+                        //listAdapter.add("Recommended lowerSpeed: "+ String.valueOf(lowerSpeedAvg));
+                        //messageListView.smoothScrollToPosition(listAdapter.getCount() - 1);
                     }
                     if (!foundClosestHigherSpeed && index >= 2) {
                         foundClosestHigherSpeed = true;
                         higherSpeed1 = speedIntervals[index - 2];
                         higherSpeed2 = speedIntervals[index - 1];
                         higherSpeedAvg = (higherSpeed1 + higherSpeed2) / 2;
-                        listAdapter.add("Recommended higherSpeed: "+  String.valueOf(higherSpeedAvg));
-                        messageListView.smoothScrollToPosition(listAdapter.getCount() - 1);
+                        fasterSpeed.setText(df.format(higherSpeedAvg));
+                        //listAdapter.add("Recommended higherSpeed: "+  String.valueOf(higherSpeedAvg));
+                        //messageListView.smoothScrollToPosition(listAdapter.getCount() - 1);
                     }
                 }
                 index++;
@@ -747,10 +809,10 @@ public class MainActivity extends Activity implements RadioGroup.OnCheckedChange
             value = message.getBytes("UTF-8");
             mService.writeRXCharacteristic(value);
             //Update the log with time stamp
-            String currentDateTimeString = DateFormat.getTimeInstance().format(new Date());
-            listAdapter.add("["+currentDateTimeString+"] TX: "+ message);
-            messageListView.smoothScrollToPosition(listAdapter.getCount() - 1);
-            edtMessage.setText("");
+            //String currentDateTimeString = DateFormat.getTimeInstance().format(new Date());
+            //listAdapter.add("["+currentDateTimeString+"] TX: "+ message);
+            //messageListView.smoothScrollToPosition(listAdapter.getCount() - 1);
+            //edtMessage.setText("");
         } catch (UnsupportedEncodingException e) {
             // TODO Auto-generated catch block
             e.printStackTrace();
@@ -768,13 +830,15 @@ public class MainActivity extends Activity implements RadioGroup.OnCheckedChange
             elapsedTime = (float)(Integer.decode("0x"+split[1] + split[2]))/10;
             state = Integer.parseInt(split[0]);
             //listAdapter.add("Parsed: "+ String.valueOf(state)+","+String.valueOf(elapsedTime)+","+String.valueOf(timeRed)+","+String.valueOf(timeGreen));
+
+            //speedView.setText(df.format((currentLocation.getSpeed()*3.6f)));
             if(state==0)
-                stateText.setText("Red");
+                elapsedImage.setImageResource(R.drawable.elapsedred);
             else
-                stateText.setText("Green");
-            redText.setText(Float.toString(timeRed));
-            greenText.setText(Float.toString(timeGreen));
-            elapsedText.setText(Float.toString(elapsedTime));
+                elapsedImage.setImageResource(R.drawable.elapsedgreen);
+            redText.setText(df.format(timeRed));
+            greenText.setText(df.format(timeGreen));
+            elapsedText.setText(df.format(elapsedTime));
         }
 
     }

@@ -10,25 +10,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9bd41c4e-88b1-4c8c-aa57-8e5e167aa48c" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Android-nRF-UART.iml" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/.name" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/support_annotations_23_0_0.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/support_v4_23_0_0.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/nRFUART_GoogleAPI_Android4.3+.iml" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/gradle.xml" afterPath="$PROJECT_DIR$/.idea/gradle.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/modules.xml" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/vcs.xml" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/drawable-xxhdpi/green.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/drawable-xxhdpi/greenlight.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/drawable-xxhdpi/id.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/drawable-xxhdpi/red.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/drawable-xxhdpi/redlight.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/drawable/traffic.png" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/src/main/res/drawable-hdpi/ICON.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/src/main/res/drawable-hdpi/nrfuart_hdpi_icon.png" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/app.iml" afterPath="$PROJECT_DIR$/app/app.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build.gradle" afterPath="$PROJECT_DIR$/app/build.gradle" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" afterPath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/nordicsemi/nrfUARTv2/MainActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/nordicsemi/nrfUARTv2/MainActivity.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/layout/main.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/main.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" afterPath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build.gradle" afterPath="$PROJECT_DIR$/build.gradle" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" afterPath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/local.properties" afterPath="$PROJECT_DIR$/local.properties" />
     </list>
     <ignored path="nRFUART_GoogleAPI_Android4.3+.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -63,39 +55,49 @@
       <file leaf-file-name="MainActivity.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/nordicsemi/nrfUARTv2/MainActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="580">
-              <caret line="680" column="0" lean-forward="true" selection-start-line="680" selection-start-column="0" selection-end-line="680" selection-end-column="0" />
+            <state relative-caret-position="290">
+              <caret line="788" column="71" lean-forward="false" selection-start-line="788" selection-start-column="71" selection-end-line="788" selection-end-column="71" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#8040#8440#0" expanded="true" />
-                <element signature="e#8439#8440#0" expanded="true" />
-                <element signature="e#8538#9609#0" expanded="true" />
-                <element signature="e#9608#9609#0" expanded="true" />
-                <element signature="e#9677#10693#0" expanded="true" />
-                <element signature="e#10692#10693#0" expanded="true" />
-                <element signature="e#10729#11143#0" expanded="true" />
-                <element signature="e#11142#11143#0" expanded="true" />
-                <element signature="e#11179#11449#0" expanded="true" />
-                <element signature="e#11448#11449#0" expanded="true" />
-                <element signature="e#11485#11877#0" expanded="true" />
-                <element signature="e#11876#11877#0" expanded="true" />
-                <element signature="e#13490#15180#0" expanded="true" />
-                <element signature="e#13649#15154#0" expanded="true" />
-                <element signature="e#15153#15154#0" expanded="true" />
-                <element signature="e#15179#15180#0" expanded="true" />
-                <element signature="e#16125#19806#0" expanded="true" />
-                <element signature="e#16441#17270#0" expanded="true" />
-                <element signature="e#17269#17270#0" expanded="true" />
-                <element signature="e#17434#18280#0" expanded="true" />
-                <element signature="e#18279#18280#0" expanded="true" />
-                <element signature="e#18737#19514#0" expanded="true" />
-                <element signature="e#19513#19514#0" expanded="true" />
-                <element signature="e#19805#19806#0" expanded="true" />
-                <element signature="e#24201#24221#0" expanded="true" />
-                <element signature="e#24247#24269#0" expanded="true" />
-                <element signature="e#24302#24320#0" expanded="true" />
-                <element signature="e#24579#24596#0" expanded="true" />
+                <element signature="e#8853#9946#0" expanded="true" />
+                <element signature="e#9945#9946#0" expanded="true" />
+                <element signature="e#10044#11119#0" expanded="true" />
+                <element signature="e#11118#11119#0" expanded="true" />
+                <element signature="e#12261#12689#0" expanded="true" />
+                <element signature="e#12688#12689#0" expanded="true" />
+                <element signature="e#12725#13312#0" expanded="true" />
+                <element signature="e#13311#13312#0" expanded="true" />
+                <element signature="e#13348#14091#0" expanded="true" />
+                <element signature="e#14090#14091#0" expanded="true" />
+                <element signature="e#15704#17449#0" expanded="true" />
+                <element signature="e#15863#17423#0" expanded="true" />
+                <element signature="e#17422#17423#0" expanded="true" />
+                <element signature="e#17448#17449#0" expanded="true" />
+                <element signature="e#18394#22117#0" expanded="true" />
+                <element signature="e#18710#19573#0" expanded="true" />
+                <element signature="e#19572#19573#0" expanded="true" />
+                <element signature="e#19737#20587#0" expanded="true" />
+                <element signature="e#20586#20587#0" expanded="true" />
+                <element signature="e#21044#21825#0" expanded="true" />
+                <element signature="e#21824#21825#0" expanded="true" />
+                <element signature="e#22116#22117#0" expanded="true" />
+                <element signature="e#26512#26532#0" expanded="true" />
+                <element signature="e#26558#26580#0" expanded="true" />
+                <element signature="e#26613#26631#0" expanded="true" />
+                <element signature="e#26890#26907#0" expanded="true" />
+                <marker date="1520902095203" expanded="false" signature="11198:11298" ph="(v) → {" />
+                <marker date="1520902095203" expanded="false" signature="12199:12214" ph="}" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Location.class" pinned="false" current-in-tab="false">
+        <entry file="jar://$USER_HOME$/AppData/Local/Android/Sdk/platforms/android-25/android.jar!/android/location/Location.class">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1856">
+              <caret line="115" column="25" lean-forward="false" selection-start-line="115" selection-start-column="17" selection-end-line="115" selection-end-column="25" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -103,26 +105,13 @@
       <file leaf-file-name="AndroidManifest.xml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/AndroidManifest.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1450">
-              <caret line="50" column="130" lean-forward="false" selection-start-line="50" selection-start-column="130" selection-end-line="50" selection-end-column="130" />
+            <state relative-caret-position="1479">
+              <caret line="51" column="51" lean-forward="false" selection-start-line="51" selection-start-column="51" selection-end-line="51" selection-end-column="51" />
               <folding />
             </state>
           </provider>
           <provider editor-type-id="android-manifest">
             <state />
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="device_element.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/device_element.xml">
-          <provider selected="true" editor-type-id="android-designer2">
-            <state />
-          </provider>
-          <provider editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
           </provider>
         </entry>
       </file>
@@ -142,12 +131,19 @@
       <file leaf-file-name="strings.xml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/res/values/strings.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="522">
-              <caret line="18" column="50" lean-forward="false" selection-start-line="18" selection-start-column="50" selection-end-line="18" selection-end-column="50" />
-              <folding>
-                <element signature="e#1749#1753#0" expanded="false" />
-                <element signature="e#1768#1772#0" expanded="false" />
-              </folding>
+            <state relative-caret-position="667">
+              <caret line="23" column="0" lean-forward="false" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="styles.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/res/values/styles.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -158,9 +154,21 @@
             <state />
           </provider>
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="225">
-              <caret line="54" column="41" lean-forward="true" selection-start-line="54" selection-start-column="41" selection-end-line="54" selection-end-column="41" />
+            <state relative-caret-position="761">
+              <caret line="104" column="47" lean-forward="false" selection-start-line="104" selection-start-column="47" selection-end-line="104" selection-end-column="47" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="R.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/build/generated/source/r/androidTest/debug/com/nordicsemi/nrfUARTv2/test/R.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="116">
+              <caret line="9" column="19" lean-forward="false" selection-start-line="9" selection-start-column="19" selection-end-line="9" selection-end-column="19" />
+              <folding>
+                <element signature="e#0#13720#0" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -184,71 +192,47 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="local.properties" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/local.properties">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="DeviceListActivity.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/nordicsemi/nrfUARTv2/DeviceListActivity.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="5452">
-              <caret line="244" column="4" lean-forward="false" selection-start-line="244" selection-start-column="4" selection-end-line="244" selection-end-column="4" />
-              <folding>
-                <element signature="e#0#11524#0" expanded="false" />
-                <element signature="imports" expanded="false" />
-                <element signature="e#9271#9272#0" expanded="false" />
-                <element signature="e#9316#9317#0" expanded="false" />
-                <element signature="e#9381#9382#0" expanded="false" />
-                <element signature="e#9433#9434#0" expanded="false" />
-                <element signature="e#9498#9499#0" expanded="false" />
-                <element signature="e#9537#9538#0" expanded="false" />
-                <element signature="e#11452#11453#0" expanded="false" />
-                <element signature="e#11520#11521#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
     </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="resourceFile" />
+      </list>
+    </option>
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>&quot;start</find>
-      <find>RX</find>
-      <find>edtMessage</find>
-      <find>setTimingvalues</find>
-      <find>currentTime</find>
-      <find>pa</find>
-      <find>speed</find>
-      <find>button</find>
-      <find>btnSend</find>
-      <find>interval</find>
-      <find>message</find>
-      <find>&quot;111</find>
-      <find>currentLocation</find>
-      <find>String</find>
-      <find>start</find>
-      <find>distancedist</find>
-      <find>distance</find>
-      <find>destination</find>
       <find>locati</find>
       <find>speedIntervals</find>
       <find>sendButton</find>
       <find>mater</find>
       <find>disconnect</find>
-      <find>ledControl</find>
       <find>realEl</find>
       <find>text</find>
       <find>timeRed</find>
-      <find>location</find>
       <find>log</find>
       <find>elaps</find>
+      <find>png</find>
+      <find>elapsed</find>
+      <find>image</find>
+      <find>setVisibility</find>
+      <find>send</find>
+      <find>fastes</find>
+      <find>btnSend</find>
+      <find>ledControl</find>
+      <find>messageListView</find>
+      <find>edtMessage</find>
+      <find>locationUpdates</find>
+      <find>location</find>
+      <find>destinationRequest</find>
+      <find>timeGreen</find>
+      <find>stateImage</find>
+      <find>redText.setText</find>
+      <find>elapsedText.set</find>
+      <find>currentLocation.getSpeed</find>
+      <find>setMaximumFractionDigits</find>
+      <find>speedView</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -2005,8 +1989,9 @@
         <option value="$PROJECT_DIR$/app/src/main/res/layout/title_bar.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/values/strings.xml" />
         <option value="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/main.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/res/drawable/green.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/nordicsemi/nrfUARTv2/MainActivity.java" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/main.xml" />
       </list>
     </option>
   </component>
@@ -2032,7 +2017,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
+      <pane id="ProjectPane" />
       <pane id="PackagesPane" />
       <pane id="AndroidView">
         <subPane>
@@ -2109,7 +2094,7 @@
         </subPane>
       </pane>
       <pane id="Scope" />
-      <pane id="ProjectPane" />
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -2128,6 +2113,13 @@
     <property name="ANDROID_EXTENDED_DEVICE_CHOOSER_AVD" value="AVD_for_Nexus_7_by_Google" />
     <property name="device.picker.selection" value="ce0516056a66cf1d04" />
     <property name="android.profiler.active" value="true" />
+    <property name="last_directory_selection" value="$PROJECT_DIR$/app/src/main/res/drawable-xxhdpi" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Fifth\StudioProjects\Android-nRF-UART\app\src\main\res\drawable-xxhdpi" />
+      <recent name="C:\Users\Fifth\StudioProjects\Android-nRF-UART\app\src\main\res\drawable" />
+    </key>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -2211,7 +2203,7 @@
       <option name="DEEP_LINK" value="" />
       <option name="ACTIVITY_CLASS" value="" />
       <method>
-        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1520785933718" />
+        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1520902400343" />
       </method>
     </configuration>
     <configuration default="true" type="AndroidTestRunConfigurationType" factoryName="Android Instrumented Tests">
@@ -2258,7 +2250,7 @@
         <option name="ADVANCED_PROFILING_ENABLED" value="false" />
       </Profilers>
       <method>
-        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1520785933718" />
+        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1520902400343" />
       </method>
     </configuration>
     <configuration default="true" type="Application" factoryName="Application">
@@ -2299,6 +2291,27 @@
       <setting name="params" value="" />
       <setting name="workDir" value="file://$PROJECT_DIR$" />
       <setting name="debug" value="false" />
+      <method />
+    </configuration>
+    <configuration default="true" type="JUnit" factoryName="JUnit">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <module name="" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="METHOD_NAME" />
+      <option name="TEST_OBJECT" value="class" />
+      <option name="VM_PARAMETERS" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
       <method />
     </configuration>
     <configuration default="true" type="JarApplication" factoryName="JAR Application">
@@ -2561,8 +2574,9 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-12" y="-12" width="3864" height="2114" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info id="Android Profiler" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.32961783" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Android Profiler" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32961783" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32961783" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32643312" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Build Variants" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
@@ -2571,21 +2585,21 @@
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.45401382" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32961783" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32961783" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32961783" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32961783" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Logcat" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32961783" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Logcat" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32961783" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Captures" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Gradle Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.09463052" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.09463052" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Device File Explorer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -2637,133 +2651,6 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/build.gradle">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="406">
-          <caret line="14" column="16" lean-forward="false" selection-start-line="14" selection-start-column="16" selection-end-line="14" selection-end-column="16" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/nordicsemi/nrfUARTv2/MainActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#8040#8440#0" expanded="true" />
-            <element signature="e#8439#8440#0" expanded="true" />
-            <element signature="e#8538#9609#0" expanded="true" />
-            <element signature="e#9608#9609#0" expanded="true" />
-            <element signature="e#9677#10693#0" expanded="true" />
-            <element signature="e#10692#10693#0" expanded="true" />
-            <element signature="e#10729#11143#0" expanded="true" />
-            <element signature="e#11142#11143#0" expanded="true" />
-            <element signature="e#11179#11449#0" expanded="true" />
-            <element signature="e#11448#11449#0" expanded="true" />
-            <element signature="e#11485#11877#0" expanded="true" />
-            <element signature="e#11876#11877#0" expanded="true" />
-            <element signature="e#13490#15180#0" expanded="true" />
-            <element signature="e#13649#15154#0" expanded="true" />
-            <element signature="e#15153#15154#0" expanded="true" />
-            <element signature="e#15179#15180#0" expanded="true" />
-            <element signature="e#16125#19806#0" expanded="true" />
-            <element signature="e#16441#17270#0" expanded="true" />
-            <element signature="e#17269#17270#0" expanded="true" />
-            <element signature="e#17434#18280#0" expanded="true" />
-            <element signature="e#18279#18280#0" expanded="true" />
-            <element signature="e#18737#19514#0" expanded="true" />
-            <element signature="e#19513#19514#0" expanded="true" />
-            <element signature="e#19805#19806#0" expanded="true" />
-            <element signature="e#24201#24221#0" expanded="true" />
-            <element signature="e#24247#24269#0" expanded="true" />
-            <element signature="e#24302#24320#0" expanded="true" />
-            <element signature="e#24579#24596#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/nordicsemi/nrfUARTv2/DeviceListActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="6844">
-          <caret line="298" column="45" lean-forward="false" selection-start-line="298" selection-start-column="45" selection-end-line="298" selection-end-column="45" />
-          <folding>
-            <element signature="e#0#11524#0" expanded="false" />
-            <element signature="imports" expanded="false" />
-            <element signature="e#9271#9272#0" expanded="false" />
-            <element signature="e#9316#9317#0" expanded="false" />
-            <element signature="e#9381#9382#0" expanded="false" />
-            <element signature="e#9433#9434#0" expanded="false" />
-            <element signature="e#9498#9499#0" expanded="false" />
-            <element signature="e#9537#9538#0" expanded="false" />
-            <element signature="e#11452#11453#0" expanded="false" />
-            <element signature="e#11520#11521#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/values/strings.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1682">
-          <caret line="58" column="44" lean-forward="false" selection-start-line="58" selection-start-column="44" selection-end-line="58" selection-end-column="44" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/build.gradle">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="58">
-          <caret line="2" column="24" lean-forward="false" selection-start-line="2" selection-start-column="24" selection-end-line="2" selection-end-column="24" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/build/intermediates/manifests/full/debug/AndroidManifest.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1015">
-          <caret line="35" column="0" lean-forward="false" selection-start-line="35" selection-start-column="0" selection-end-line="35" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/AndroidManifest.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1073">
-          <caret line="37" column="51" lean-forward="false" selection-start-line="37" selection-start-column="51" selection-end-line="37" selection-end-column="51" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/nordicsemi/nrfUARTv2/UartService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="493">
-          <caret line="55" column="19" lean-forward="false" selection-start-line="55" selection-start-column="19" selection-end-line="55" selection-end-column="19" />
-          <folding>
-            <element signature="e#0#14839#0" expanded="false" />
-            <element signature="imports" expanded="false" />
-            <element signature="e#7546#7547#0" expanded="false" />
-            <element signature="e#7593#7594#0" expanded="false" />
-            <element signature="e#7657#7658#0" expanded="false" />
-            <element signature="e#7687#7688#0" expanded="false" />
-            <element signature="e#14378#14379#0" expanded="false" />
-            <element signature="e#14409#14410#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/settings.gradle">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/build.gradle">
-      <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="174">
           <caret line="6" column="56" lean-forward="false" selection-start-line="6" selection-start-column="56" selection-end-line="6" selection-end-column="56" />
           <folding />
@@ -2771,13 +2658,13 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/device_element.xml">
+      <provider selected="true" editor-type-id="android-designer2">
+        <state />
+      </provider>
       <provider editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
-      </provider>
-      <provider selected="true" editor-type-id="android-designer2">
-        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/nordicsemi/nrfUARTv2/MainActivity.java">
@@ -2786,34 +2673,34 @@
           <caret line="120" column="24" lean-forward="true" selection-start-line="120" selection-start-column="24" selection-end-line="120" selection-end-column="24" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#8040#8440#0" expanded="true" />
-            <element signature="e#8439#8440#0" expanded="true" />
-            <element signature="e#8538#9609#0" expanded="true" />
-            <element signature="e#9608#9609#0" expanded="true" />
-            <element signature="e#9677#10693#0" expanded="true" />
-            <element signature="e#10692#10693#0" expanded="true" />
-            <element signature="e#10729#11143#0" expanded="true" />
-            <element signature="e#11142#11143#0" expanded="true" />
-            <element signature="e#11179#11449#0" expanded="true" />
-            <element signature="e#11448#11449#0" expanded="true" />
-            <element signature="e#11485#11877#0" expanded="true" />
-            <element signature="e#11876#11877#0" expanded="true" />
-            <element signature="e#13490#15180#0" expanded="true" />
-            <element signature="e#13649#15154#0" expanded="true" />
-            <element signature="e#15153#15154#0" expanded="true" />
-            <element signature="e#15179#15180#0" expanded="true" />
-            <element signature="e#16125#19806#0" expanded="true" />
-            <element signature="e#16441#17270#0" expanded="true" />
-            <element signature="e#17269#17270#0" expanded="true" />
-            <element signature="e#17434#18280#0" expanded="true" />
-            <element signature="e#18279#18280#0" expanded="true" />
-            <element signature="e#18737#19514#0" expanded="true" />
-            <element signature="e#19513#19514#0" expanded="true" />
-            <element signature="e#19805#19806#0" expanded="true" />
-            <element signature="e#24201#24221#0" expanded="true" />
-            <element signature="e#24247#24269#0" expanded="true" />
-            <element signature="e#24302#24320#0" expanded="true" />
-            <element signature="e#24579#24596#0" expanded="true" />
+            <element signature="e#8853#9946#0" expanded="true" />
+            <element signature="e#9945#9946#0" expanded="true" />
+            <element signature="e#10044#11119#0" expanded="true" />
+            <element signature="e#11118#11119#0" expanded="true" />
+            <element signature="e#12261#12689#0" expanded="true" />
+            <element signature="e#12688#12689#0" expanded="true" />
+            <element signature="e#12725#13312#0" expanded="true" />
+            <element signature="e#13311#13312#0" expanded="true" />
+            <element signature="e#13348#14091#0" expanded="true" />
+            <element signature="e#14090#14091#0" expanded="true" />
+            <element signature="e#15704#17449#0" expanded="true" />
+            <element signature="e#15863#17423#0" expanded="true" />
+            <element signature="e#17422#17423#0" expanded="true" />
+            <element signature="e#17448#17449#0" expanded="true" />
+            <element signature="e#18394#22117#0" expanded="true" />
+            <element signature="e#18710#19573#0" expanded="true" />
+            <element signature="e#19572#19573#0" expanded="true" />
+            <element signature="e#19737#20587#0" expanded="true" />
+            <element signature="e#20586#20587#0" expanded="true" />
+            <element signature="e#21044#21825#0" expanded="true" />
+            <element signature="e#21824#21825#0" expanded="true" />
+            <element signature="e#22116#22117#0" expanded="true" />
+            <element signature="e#26512#26532#0" expanded="true" />
+            <element signature="e#26558#26580#0" expanded="true" />
+            <element signature="e#26613#26631#0" expanded="true" />
+            <element signature="e#26890#26907#0" expanded="true" />
+            <marker date="1520902095203" expanded="false" signature="11198:11298" ph="(v) → {" />
+            <marker date="1520902095203" expanded="false" signature="12199:12214" ph="}" />
           </folding>
         </state>
       </provider>
@@ -2822,18 +2709,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="6844">
           <caret line="298" column="45" lean-forward="true" selection-start-line="298" selection-start-column="45" selection-end-line="298" selection-end-column="45" />
-          <folding>
-            <element signature="e#0#11524#0" expanded="false" />
-            <element signature="imports" expanded="false" />
-            <element signature="e#9271#9272#0" expanded="false" />
-            <element signature="e#9316#9317#0" expanded="false" />
-            <element signature="e#9381#9382#0" expanded="false" />
-            <element signature="e#9433#9434#0" expanded="false" />
-            <element signature="e#9498#9499#0" expanded="false" />
-            <element signature="e#9537#9538#0" expanded="false" />
-            <element signature="e#11452#11453#0" expanded="false" />
-            <element signature="e#11520#11521#0" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -2963,46 +2839,34 @@
         </state>
       </provider>
     </entry>
-    <entry file="jar://$USER_HOME$/AppData/Local/Android/Sdk/platforms/android-25/android.jar!/android/location/Location.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
-          <caret line="47" column="17" lean-forward="false" selection-start-line="47" selection-start-column="17" selection-end-line="47" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/dis_values.xml">
+      <provider editor-type-id="android-designer2">
+        <state />
+      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
-      </provider>
-      <provider editor-type-id="android-designer2">
-        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/message_detail.xml">
+      <provider editor-type-id="android-designer2">
+        <state />
+      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
-      </provider>
-      <provider editor-type-id="android-designer2">
-        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/title_bar.xml">
+      <provider editor-type-id="android-designer2">
+        <state />
+      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="116">
           <caret line="4" column="4" lean-forward="false" selection-start-line="4" selection-start-column="4" selection-end-line="4" selection-end-column="4" />
-          <folding>
-            <element signature="e#367#385#0" expanded="false" />
-          </folding>
         </state>
-      </provider>
-      <provider editor-type-id="android-designer2">
-        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/build.gradle">
@@ -3025,7 +2889,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -3041,71 +2904,36 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/values/strings.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="522">
-          <caret line="18" column="50" lean-forward="false" selection-start-line="18" selection-start-column="50" selection-end-line="18" selection-end-column="50" />
-          <folding>
-            <element signature="e#1749#1753#0" expanded="false" />
-            <element signature="e#1768#1772#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/device_element.xml">
+      <provider selected="true" editor-type-id="android-designer2">
+        <state />
+      </provider>
       <provider editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
-      </provider>
-      <provider selected="true" editor-type-id="android-designer2">
-        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/nordicsemi/nrfUARTv2/DeviceListActivity.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="5452">
           <caret line="244" column="4" lean-forward="false" selection-start-line="244" selection-start-column="4" selection-end-line="244" selection-end-column="4" />
-          <folding>
-            <element signature="e#0#11524#0" expanded="false" />
-            <element signature="imports" expanded="false" />
-            <element signature="e#9271#9272#0" expanded="false" />
-            <element signature="e#9316#9317#0" expanded="false" />
-            <element signature="e#9381#9382#0" expanded="false" />
-            <element signature="e#9433#9434#0" expanded="false" />
-            <element signature="e#9498#9499#0" expanded="false" />
-            <element signature="e#9537#9538#0" expanded="false" />
-            <element signature="e#11452#11453#0" expanded="false" />
-            <element signature="e#11520#11521#0" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/device_list.xml">
+      <provider editor-type-id="android-designer2">
+        <state />
+      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1595">
           <caret line="55" column="8" lean-forward="false" selection-start-line="55" selection-start-column="8" selection-end-line="55" selection-end-column="8" />
           <folding />
         </state>
-      </provider>
-      <provider editor-type-id="android-designer2">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/AndroidManifest.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1450">
-          <caret line="50" column="130" lean-forward="false" selection-start-line="50" selection-start-column="130" selection-end-line="50" selection-end-column="130" />
-          <folding />
-        </state>
-      </provider>
-      <provider editor-type-id="android-manifest">
-        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/nordicsemi/nrfUARTv2/UartService.java">
@@ -3139,53 +2967,131 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/values/strings.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="667">
+          <caret line="23" column="0" lean-forward="false" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/values/styles.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/mipmap-xxxhdpi/bikeIcon.png" />
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/mipmap-hdpi/bikeIcon.png" />
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/drawable/green.xml" />
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/drawable-hdpi/green.png" />
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/drawable-xxhdpi/red.jpg">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/build/generated/source/r/androidTest/debug/com/nordicsemi/nrfUARTv2/test/R.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="116">
+          <caret line="9" column="19" lean-forward="false" selection-start-line="9" selection-start-column="19" selection-end-line="9" selection-end-column="19" />
+          <folding>
+            <element signature="e#0#13720#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/AndroidManifest.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1479">
+          <caret line="51" column="51" lean-forward="false" selection-start-line="51" selection-start-column="51" selection-end-line="51" selection-end-column="51" />
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="android-manifest">
+        <state />
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/AppData/Local/Android/Sdk/platforms/android-25/android.jar!/android/location/Location.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1856">
+          <caret line="115" column="25" lean-forward="false" selection-start-line="115" selection-start-column="17" selection-end-line="115" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/drawable-xxhdpi/elapsedgreen.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/AppData/Local/Android/Sdk/platforms/android-25/android.jar!/android/widget/ImageView.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="203">
+          <caret line="23" column="13" lean-forward="false" selection-start-line="23" selection-start-column="13" selection-end-line="23" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/AppData/Local/Android/Sdk/platforms/android-25/android.jar!/java/text/DecimalFormat.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1092">
+          <caret line="167" column="16" lean-forward="false" selection-start-line="167" selection-start-column="16" selection-end-line="167" selection-end-column="16" />
+          <folding>
+            <element signature="e#4346#4347#0" expanded="true" />
+            <element signature="e#4397#4398#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/nordicsemi/nrfUARTv2/MainActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="580">
-          <caret line="680" column="0" lean-forward="true" selection-start-line="680" selection-start-column="0" selection-end-line="680" selection-end-column="0" />
+        <state relative-caret-position="290">
+          <caret line="788" column="71" lean-forward="false" selection-start-line="788" selection-start-column="71" selection-end-line="788" selection-end-column="71" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#8040#8440#0" expanded="true" />
-            <element signature="e#8439#8440#0" expanded="true" />
-            <element signature="e#8538#9609#0" expanded="true" />
-            <element signature="e#9608#9609#0" expanded="true" />
-            <element signature="e#9677#10693#0" expanded="true" />
-            <element signature="e#10692#10693#0" expanded="true" />
-            <element signature="e#10729#11143#0" expanded="true" />
-            <element signature="e#11142#11143#0" expanded="true" />
-            <element signature="e#11179#11449#0" expanded="true" />
-            <element signature="e#11448#11449#0" expanded="true" />
-            <element signature="e#11485#11877#0" expanded="true" />
-            <element signature="e#11876#11877#0" expanded="true" />
-            <element signature="e#13490#15180#0" expanded="true" />
-            <element signature="e#13649#15154#0" expanded="true" />
-            <element signature="e#15153#15154#0" expanded="true" />
-            <element signature="e#15179#15180#0" expanded="true" />
-            <element signature="e#16125#19806#0" expanded="true" />
-            <element signature="e#16441#17270#0" expanded="true" />
-            <element signature="e#17269#17270#0" expanded="true" />
-            <element signature="e#17434#18280#0" expanded="true" />
-            <element signature="e#18279#18280#0" expanded="true" />
-            <element signature="e#18737#19514#0" expanded="true" />
-            <element signature="e#19513#19514#0" expanded="true" />
-            <element signature="e#19805#19806#0" expanded="true" />
-            <element signature="e#24201#24221#0" expanded="true" />
-            <element signature="e#24247#24269#0" expanded="true" />
-            <element signature="e#24302#24320#0" expanded="true" />
-            <element signature="e#24579#24596#0" expanded="true" />
+            <element signature="e#8853#9946#0" expanded="true" />
+            <element signature="e#9945#9946#0" expanded="true" />
+            <element signature="e#10044#11119#0" expanded="true" />
+            <element signature="e#11118#11119#0" expanded="true" />
+            <element signature="e#12261#12689#0" expanded="true" />
+            <element signature="e#12688#12689#0" expanded="true" />
+            <element signature="e#12725#13312#0" expanded="true" />
+            <element signature="e#13311#13312#0" expanded="true" />
+            <element signature="e#13348#14091#0" expanded="true" />
+            <element signature="e#14090#14091#0" expanded="true" />
+            <element signature="e#15704#17449#0" expanded="true" />
+            <element signature="e#15863#17423#0" expanded="true" />
+            <element signature="e#17422#17423#0" expanded="true" />
+            <element signature="e#17448#17449#0" expanded="true" />
+            <element signature="e#18394#22117#0" expanded="true" />
+            <element signature="e#18710#19573#0" expanded="true" />
+            <element signature="e#19572#19573#0" expanded="true" />
+            <element signature="e#19737#20587#0" expanded="true" />
+            <element signature="e#20586#20587#0" expanded="true" />
+            <element signature="e#21044#21825#0" expanded="true" />
+            <element signature="e#21824#21825#0" expanded="true" />
+            <element signature="e#22116#22117#0" expanded="true" />
+            <element signature="e#26512#26532#0" expanded="true" />
+            <element signature="e#26558#26580#0" expanded="true" />
+            <element signature="e#26613#26631#0" expanded="true" />
+            <element signature="e#26890#26907#0" expanded="true" />
+            <marker date="1520902095203" expanded="false" signature="11198:11298" ph="(v) → {" />
+            <marker date="1520902095203" expanded="false" signature="12199:12214" ph="}" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/main.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="54" column="41" lean-forward="true" selection-start-line="54" selection-start-column="41" selection-end-line="54" selection-end-column="41" />
-          <folding />
-        </state>
-      </provider>
       <provider editor-type-id="android-designer2">
         <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="761">
+          <caret line="104" column="47" lean-forward="false" selection-start-line="104" selection-start-column="47" selection-end-line="104" selection-end-column="47" />
+          <folding />
+        </state>
       </provider>
     </entry>
   </component>
